@@ -1,0 +1,102 @@
+:root{
+    --main-color-vino:#950200;
+    --main-color-verde:#7ab400;
+    
+}
+.ie-panel {
+    display: none;
+    background: #212121;
+    padding: 10px 0;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+    clear: both;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  html.ie-10 .ie-panel,
+  html.lt-ie-10 .ie-panel {
+    display: block;
+  }
+ /* Barra superior */
+.barra-superior {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+
+}
+
+/* BARRA PRINCIPAL TICKETS */
+.contenedor-barra {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+/* Usuario logueado */
+.usuario-logueado {
+  text-align: end;
+  font-size: 14px;
+  color: #333;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.usuario-logueado strong {
+  color: var(--main-color-vino);
+  display: block;
+  font-weight: bold;
+}
+
+.usuario-logueado {
+  text-align: right;
+  font-size: 14px;
+  color: #333;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.usuario-logueado span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.info-usuario {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap; /* evita que se rompa en pantallas pequeñas */
+}
+.info-usuario strong {
+  color: var(--main-color-vino);
+  font-weight: bold;
+  white-space: nowrap; /* Mantiene todo en una sola línea */
+  max-width: 300px;     /* Aumenta el ancho disponible */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Opcional: pone "..." si se desborda */
+}
+
+
+/* Botón de cerrar sesión */
+.cerrar-sesion {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cerrar-sesion img {
+  width: 20px;
+  height: 20px;
+}
+
+

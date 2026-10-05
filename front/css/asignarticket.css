@@ -1,0 +1,141 @@
+:root{
+    --main-color-vino:#950200;
+    --main-color-verde:#7ab400;
+    --main-color-azul:#241f4e;
+}
+
+.admin-panel {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.filtro-prioridad {
+  margin: 18px 0 10px;
+  text-align: left;
+}
+
+.filtro-prioridad select {
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.panel {
+  display: flex;
+  gap: 20px;
+}
+
+.ticket-list {
+  width: 40%;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 400px;
+  overflow-y: auto;
+}
+
+.ticket-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-list li {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ticket-list li:hover {
+  background-color: #f0f8ff;
+}
+
+.ticket-list li.seleccionado {
+  background-color: #dfefff;
+  border-left: 4px solid #3498db;
+}
+
+.ticket-detail {
+  width: 60%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 200px;
+}
+
+.prioridad {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  float: right;
+}
+
+.prioridad.alta {
+  background: #ee4618;
+  color: white;
+}
+
+.prioridad.media {
+  background: var(--main-color-azul);
+  color: white;
+}
+
+.prioridad.baja {
+  background: var(--main-color-verde);
+  color: white;
+}
+
+.prioridad.critica {
+  background: var(--main-color-vino);
+  color: white;
+}
+.textBox2{
+    width: calc(42% - 12px);
+    padding: 3px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+}
+.botonAsignar{
+    margin-top: 5px;
+    background-color: var(--main-color-azul);
+    color: white;
+    padding: 6px 0px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 28%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.contenedor-botonesEvolucion {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  gap: 10px;
+}
+.botonGuardar,
+.botonFinalizar {
+  width: 28%;
+  padding: 6px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.botonGuardar {
+  background-color: var(--main-color-verde);
+  color: white;
+}
+.botonFinalizar {
+  background-color: var(--main-color-vino);
+  color: white;
+}

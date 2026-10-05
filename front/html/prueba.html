@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Tickets</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .titulo {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .filtro-prioridad {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #f3f4f6;
+      padding: 10px 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      max-width: 300px;
+    }
+
+    .filtro-label {
+      font-weight: 500;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .filtro-select {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      background-color: #ffffff;
+      font-size: 14px;
+      color: #111827;
+      transition: border-color 0.3s ease;
+    }
+
+    .filtro-select:hover,
+    .filtro-select:focus {
+      border-color: #2563eb;
+      outline: none;
+    }
+
+    .contenedor-tickets {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .ticket-card {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      border-left: 6px solid #3b82f6;
+      transition: transform 0.2s;
+    }
+
+    .ticket-card:hover {
+      transform: scale(1.02);
+    }
+
+    .ticket-titulo {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 6px;
+    }
+
+    .ticket-detalle {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .ticket-prioridad {
+      font-size: 13px;
+      margin-top: 10px;
+      font-weight: 500;
+      color: #9ca3af;
+    }
+
+    .ticket-prioridad.alta {
+      color: #dc2626;
+    }
+
+    .ticket-prioridad.media {
+      color: #d97706;
+    }
+
+    .ticket-prioridad.baja {
+      color: #16a34a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="titulo">🎟️ Panel de Tickets</h1>
+
+  <div class="filtro-prioridad">
+    <label for="filtroPrioridad" class="filtro-label">
+      🎯 Filtrar por Prioridad:
+    </label>
+    <select id="filtroPrioridad" class="filtro-select">
+      <option value="">Todas</option>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select>
+  </div>
+
+  <div class="contenedor-tickets">
+    <!-- Ticket 1 -->
+    <div class="ticket-card" data-prioridad="Alta">
+      <div class="ticket-titulo">Error en login</div>
+      <div class="ticket-detalle">El usuario no puede ingresar al sistema con sus credenciales.</div>
+      <div class="ticket-prioridad alta">Prioridad: Alta</div>
+    </div>
+
+    <!-- Ticket 2 -->
+    <div class="ticket-card" data-prioridad="Media">
+      <div class="ticket-titulo">Actualización de datos</div>
+      <div class="ticket-detalle">Solicitud para modificar información de contacto.</div>
+      <div class="ticket-prioridad media">Prioridad: Media</div>
+    </div>
+
+    <!-- Ticket 3 -->
+    <div class="ticket-card" data-prioridad="Baja">
+      <div class="ticket-titulo">Sugerencia UI</div>
+      <div class="ticket-detalle">Cambiar el color de fondo del panel de control.</div>
+      <div class="ticket-prioridad baja">Prioridad: Baja</div>
+    </div>
+
+    <!-- Más tickets si deseas... -->
+  </div>
+
+  <script>
+    document.getElementById("filtroPrioridad").addEventListener("change", function () {
+      const filtro = this.value.toLowerCase();
+      const tickets = document.querySelectorAll(".ticket-card");
+
+      tickets.forEach(ticket => {
+        const prioridad = ticket.dataset.prioridad?.toLowerCase() || '';
+        if (!filtro || prioridad === filtro) {
+          ticket.style.display = "block";
+        } else {
+          ticket.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

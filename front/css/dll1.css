@@ -1,0 +1,71 @@
+/* Description: Master CSS file */
+
+/*****************************************
+Table Of Contents:
+- General Styles
+- Navigation
+- Header
+- Statistics
+- Introduction
+- Details 1
+- Services
+- Details 2
+- Invitation
+- Projects
+- Testimonials
+- Contact
+- Footer
+- Copyright
+- Back To Top Button
+- Extra Pages
+- Media Queries
+******************************************/
+
+/*****************************************
+Colors:
+- Backgrounds - light gray #f9fafe
+- Headings text - black #191e47
+- Body text - dark gray #6c717b
+- Buttons, icons - blue #4555d2
+- Buttons, icons, bullets - red #cc2973
+******************************************/
+:root{
+    --main-color-vino:#950200;
+    --main-color-verde:#7ab400;
+    
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(28, 28, 28, 0);
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+body {
+	margin: 0;
+	font-family: "Poppins", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.625;
+	color: #686868;
+	text-align: left;
+	background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}

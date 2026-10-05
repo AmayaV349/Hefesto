@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Selección de Opción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Menú Desplegable con Selección de Opción</h2>
+        <p>Selecciona una opción del menú desplegable y haz clic en el botón "Seleccionar" para ver el resultado:</p>
+
+        <select id="opciones">
+            <option value="">Selecciona una opción...</option>
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+            <option value="opcion4">Opción 4</option>
+            <option value="opcion5">Opción 5</option>
+        </select>
+
+        <button onclick="mostrarResultado()">Seleccionar</button>
+
+        <div id="resultado">
+            <!-- Aquí se mostrará el resultado de la selección -->
+        </div>
+    </div>
+
+    <script>
+        function mostrarResultado() {
+            // Obtener el valor seleccionado del menú desplegable
+            var select = document.getElementById("opciones");
+            var opcionSeleccionada = select.value;
+
+            // Mostrar el resultado en el div resultado
+            var resultadoDiv = document.getElementById("resultado");
+            if (opcionSeleccionada) {
+                resultadoDiv.innerHTML = "<p>Opción seleccionada: " + opcionSeleccionada + "</p>";
+            } else {
+                resultadoDiv.innerHTML = "<p>Por favor, selecciona una opción.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

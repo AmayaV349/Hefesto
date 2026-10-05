@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Datos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mesa de Ayuda - Plataforma de soporte técnico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mesa de Ayuda</title>
+
+  <!-- Iconos y Estilos -->
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mesadeayuda.css">
+  
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Bienvenido a la Mesa de Ayuda</h1>
+    <p>Gestione sus tickets de soporte de forma eficiente</p>
+  </header>
+
+  <!-- Barra de Navegación -->
+  <nav class="barra">
+    <a href="#" onclick="openSection('inicio')">Generar Ticket</a>
+    <a href="#" onclick="openSection('estado')">Estado de Solicitud</a>
+    <a href="#" onclick="openSection('historial')">Historial</a>
+    <a href="#" onclick="openSection('cancelar')">Cancelar Ticket</a>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="containerMesa" id="contenido">
+    <h2>Generar un Nuevo Ticket</h2>
+    <form action="/submit-ticket" method="post">
+      <!-- Información de Contacto -->
+      <label for="nombreFuncionario">Nombre Funcionario</label>
+      <input type="text" id="nombreFuncionario" name="nombreFuncionario" class="textBox" placeholder="Ingrese su nombre completo" required>
+
+      <label for="correo">Correo Electrónico</label>
+      <input type="email" id="correo" name="correo" class="textBox" placeholder="Ingrese su correo electrónico" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" class="textBox" placeholder="Ingrese su número de teléfono" required>
+
+      <!-- Datos del Ticket -->
+      <label for="resumen">Resumen del Problema</label>
+      <input type="text" id="resumen" name="resumen" class="textBox" placeholder="Escriba un resumen breve" required>
+
+      <label for="prioridad">Prioridad</label>
+      <select id="prioridad" name="prioridad" class="textBox">
+        <option value="" disabled selected>Seleccione una opción</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+        <option value="Urgente">Urgente</option>
+      </select>
+
+      <!-- Botón Enviar -->
+      <button type="submit" class="boton">Enviar Ticket</button>
+    </form>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <p>&copy; 2024 DLL Ingeniería. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script para Navegación -->
+  <script>
+    function openSection(section) {
+      alert('Sección seleccionada: ' + section); // Ajustar lógica según sea necesario
+    }
+  </script>
+
+</body>
+</html>
+

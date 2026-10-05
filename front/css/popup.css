@@ -1,0 +1,43 @@
+.popup{
+    font-family: "Poppins";
+    font-size: 16px;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    width:494px;
+    height: 177px;
+    padding-top: 50px;
+	text-align:center;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.popup_mensaje_ok { 
+    background-image:url("../images/popup-ok.png");
+}
+
+.popup_mensaje_error { 
+    background-image:url("../images/popup-error.png");
+}
+
+.popup_mensaje_advertencia { 
+    background-image:url("../images/popup-advertencia.png");
+}
+
+.lblMensaje{
+    font-family: "Poppins";
+    font-size: 17px;
+    color: #003265;
+    margin-top: 0px;
+}
+/* Estaba en el style del btn */
+.btnAcePop{
+    width: 96px; 
+    height: 27px;
+    background:#003265; 
+    color: #ffffff; 
+    font-family: 'Poppins'; 
+    font-size: 16px; 
+    border-radius: 6px 6px 6px 6px;
+}
